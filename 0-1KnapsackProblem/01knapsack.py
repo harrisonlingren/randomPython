@@ -5,46 +5,46 @@ def run():
 	
 	if path == '1':
 		time1 = datetime.datetime.now()
-		print( bruteforce(W, items[2], items[1], len(items[0])) )
+		print( bruteforce.bruteforce(W, items[2], items[1], len(items[0])) )
 		time2 = datetime.datetime.now()
 		tdelta = time2 - time1
 		print("Brute force: Time taken: %s ms" % int(tdelta.total_seconds()*1000) )
-		print("\n \n \n")
+		print("\n")
 		run()
 		
 	elif path == '2':
 		time1 = datetime.datetime.now()
-		print( dynamic(W, items[2], items[1], len(items[0])) )
+		print( dynamic.dynamic(W, items[2], items[1], len(items[0])) )
 		time2 = datetime.datetime.now()
 		tdelta = time2 - time1
 		print("Dynamic: Time taken: %s ms" % int(tdelta.total_seconds()*1000) )
-		print("\n \n \n")
+		print("\n")
 		run()
 	
 	elif path == '3':
 		time1 = datetime.datetime.now()
-		print( firstBranchBound(W, items[2], items[1], len(items[0])) )
+		print( firstBranchBound.firstBranchBound(W, items[2], items[1], len(items[0])) )
 		time2 = datetime.datetime.now()
 		tdelta = time2 - time1
 		print("Best First Branch Bound: Time taken: %s ms" % int(tdelta.total_seconds()*1000) )
-		print("\n \n \n")
+		print("\n")
 		run()
 	
 	elif path == '4':
 		time1 = datetime.datetime.now()
-		print( backtracking(W, items[2], items[1], len(items[0])) )
+		print( backtracking.backtracking(W, items[2], items[1], len(items[0])) )
 		time2 = datetime.datetime.now()
 		tdelta = time2 - time1
 		print("Backtracking: Time taken: %s ms" % int(tdelta.total_seconds()*1000) )
-		print("\n \n \n")
+		print("\n")
 		run()
 		
 	elif path == 'q':
-		sys.exit("End.")
+		sys.exit("See ya!")
 		
 	else:
 		print("Error: no valid option chosen. Please try again.")
-		print("\n \n \n")
+		print("\n")
 		run()
 		
 # ----------------------------------------------------------------------
