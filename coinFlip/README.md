@@ -1,1 +1,0 @@
-A simple program to simulate *n* number of coin flips.
